@@ -95,7 +95,7 @@
         toastr["error"](failMessage);
     }
     /*<![CDATA[*/
-    var contextPath = /*[[@{/}]]*/ '';
+    var contextPath = /*[[${#httpServletRequest.getContextPath()}]]*/ null;
     /*]]>*/
 
     var formZk = $("#form_zkinfo");
@@ -114,6 +114,7 @@
                 btn.attr("disabled", "disabled");
                 $.ajax({
                     type: "DELETE",
+                    async:true,
                     dataType: "json",
                     url: contextPath + "/zkinfo/" + btn.val(),
                     success: function (data) {
@@ -139,6 +140,7 @@
         btn.attr("disabled", "disabled");
         $.ajax({
             type: "POST",
+            async:true,
             dataType: "json",
             url: contextPath + "/zkinfo/reconnect/" + btn.val(),
             success: function (data) {

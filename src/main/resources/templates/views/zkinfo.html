@@ -185,7 +185,7 @@
         toastr["error"](failMessage);
     }
     /*<![CDATA[*/
-    var contextPath = /*[[@{/}]]*/ '';
+    var contextPath = /*[[${#httpServletRequest.getContextPath()}]]*/ null;
     var alias = /*[[${zkinfo.alias}]]*/ '';
     /*]]>*/
     var setting = {

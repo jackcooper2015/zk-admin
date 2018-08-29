@@ -100,7 +100,7 @@
     var addUserModal = $("#modal_user");
     var btnUserSubmit = $("#btn_user_submit");
     /*<![CDATA[*/
-    var contextPath = /*[[@{/}]]*/ '';
+    var contextPath = /*[[${#httpServletRequest.getContextPath()}]]*/ null;
     /*]]>*/
 
     $("button[name='btn_edit']").each(function () {

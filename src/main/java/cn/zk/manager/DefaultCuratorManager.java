@@ -34,10 +34,11 @@ public class DefaultCuratorManager extends AbstractCuratorManager{
         if (TreeCacheEvent.Type.NODE_ADDED.equals(event.getType()) || TreeCacheEvent.Type.NODE_UPDATED.equals(event.getType())
                 || TreeCacheEvent.Type.NODE_REMOVED.equals(event.getType())) {
             ChildData childData = event.getData();
-            String value = new String(childData.getData());
-            String path = childData.getPath();
-            setChanged();
-            notifyObservers(new ObserverDTO(ObserverDTO.Type.CHILD_EVENT, path));
+            if(childData != null) {
+                String path = childData.getPath();
+                setChanged();
+                notifyObservers(new ObserverDTO(ObserverDTO.Type.CHILD_EVENT, path));
+            }
         }
     }
 
