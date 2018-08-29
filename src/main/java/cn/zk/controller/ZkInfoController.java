@@ -110,7 +110,7 @@ public class ZkInfoController {
     /**
      * 获取zookeeper路径下的子路径列表
      */
-    @GetMapping(value = "/path/{alias}")
+    @GetMapping(value = "/zkinfo/path/{alias}")
     @ResponseBody
     public Resp<List<PathVO>> ajaxGetPath(@PathVariable(value = "alias") String alias,
                                           @RequestParam(value = "id", required = false, defaultValue = "") String id) {

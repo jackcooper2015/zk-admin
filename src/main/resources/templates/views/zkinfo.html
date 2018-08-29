@@ -569,8 +569,8 @@
             });
         }
     });
-    $(function () {
-        var ws = new WebSocket("ws://" + window.location.host + contextPath + "zk/child/event");
+    /*$(function () {
+        var ws = new WebSocket("ws://" + window.location.host + contextPath + "/zk/child/event");
         ws.onopen = function (ev) {
         };
         ws.onmessage = function (ev) {
@@ -581,7 +581,7 @@
             zTree.reAsyncChildNodes(zTree.getNodeByTId("/"), "refresh", true);
             cleanTable();
         };
-    });
+    });*/
 </script>
 </body>
 </html>

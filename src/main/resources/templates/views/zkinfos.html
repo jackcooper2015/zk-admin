@@ -189,7 +189,7 @@
         }
     });
     $(function () {
-        var ws = new WebSocket("ws://" + window.location.host + contextPath + "zk/state");
+        var ws = new WebSocket("ws://" + window.location.host + contextPath + "/zk/state");
         ws.onopen = function (ev) {
         };
         ws.onmessage = function (ev) {

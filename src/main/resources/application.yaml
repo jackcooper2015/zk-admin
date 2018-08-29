@@ -40,4 +40,4 @@ curator:
 logging:
   level:
     cn.zk: info
-    org.apache.curator: info
+    org.apache.curator: error
