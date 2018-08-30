@@ -1,13 +1,9 @@
 .form-sign-in {
     max-width: 300px;
     padding: 10px;
-    margin: 30px auto auto;
+    margin: 15% auto auto;
 }
 
-html, body {
-    background: #f9f9f9;
-    -ms-overflow-style: scrollbar; /*ie-scrollbar*/
-}
 
 @media (max-width: 768px) {
     html, body {
