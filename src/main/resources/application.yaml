@@ -39,5 +39,5 @@ curator:
     max-retries: 5
 logging:
   level:
-    cn.zk: info
+    cn.zk: error
     org.apache.curator: error
